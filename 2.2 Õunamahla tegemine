@@ -1,0 +1,9 @@
+kilogrammid = prompt("Sisestage õunte kogus kilogrammides: ")
+function mahlapakkide_arv(kilogrammid){
+liitrid = kilogrammid*0.4;
+    pakkide_arv = liitrid/ 3;
+    return Math.round(pakkide_arv);
+a = mahlapakkide_arv(kilogrammid);
+}
+
+console.log(mahlapakkide_arv(kilogrammid))
