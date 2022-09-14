@@ -1,0 +1,33 @@
+let vanus = prompt("Palun sisesta vanus: ");
+let sugu = prompt("Sisestage enda sugu: ");
+let treening = prompt("Sisestage treeningu tüüp: ");
+
+
+let pulsiSagedus = '';
+var meestePulss = 220 - vanus;
+var naistePulss = 206 - (vanus/100 * 88);
+if (sugu === 'm') {
+  pulsiSagedus =  meestePulss;
+} else if (sugu === 'n') {
+  pulsiSagedus = naistePulss;
+}
+
+let esPulss = '';
+let tePulss = '';
+if (treening === '1') {
+  esPulss = pulsiSagedus/100 * 50;
+} else if (treening === '2') {
+  esPulss = pulsiSagedus/100 * 70;
+} else if (treening === '3') {
+  esPulss = pulsiSagedus/100 * 80;
+}
+
+if (treening === '1') {
+  tePulss = pulsiSagedus/100 * 70;
+} else if (treening === '2') {
+  tePulss = pulsiSagedus/100 * 80;
+} else if (treening === '3') {
+  tePulss = pulsiSagedus/100 * 87;
+}
+
+console.log('Pulsisagedus peaks olema vahemikus ' + Math.floor(esPulss) + ' kuni ' + Math.ceil(tePulss) + '.');
